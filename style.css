@@ -1,0 +1,168 @@
+body {
+  font-family: 'Courier New', monospace;
+  background-color: #ffe6e6;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  padding: 10px;
+  overflow: hidden;
+}
+
+.letter {
+  background: #fff;
+  width: 90%;
+  max-width: 380px;
+  padding: 20px; /* Increased padding for better spacing */
+  padding-top: 30px; /* Extra space at the top */
+  border-radius: 10px;
+  box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);
+  position: relative;
+  text-align: center;
+  overflow: auto;
+}
+
+.heart {
+  position: absolute;
+  top: -25px; /* Moves it slightly up */
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 22px;
+  color: red;
+}
+
+
+h1 {
+  font-family: 'Dancing Script', cursive;
+  color: #c70039;
+  font-size: 20px; /* Smaller title */
+  margin-top: 10px;
+}
+
+p {
+  font-size: 14px; /* Smaller text */
+  line-height: 1.4;
+  text-align: justify;
+  margin: 5px 0;
+}
+
+.signature {
+  margin-top: 15px;
+  text-align: right;
+  font-style: italic;
+}
+
+.button-container {
+  text-align: center;
+  margin-top: 15px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.btn {
+  background: #c70039;
+  color: white;
+  padding: 8px;
+  text-decoration: none;
+  border-radius: 5px;
+  font-size: 14px;
+  cursor: pointer;
+  border: none;
+  transition: 0.3s ease-in-out;
+  width: 100%;
+}
+
+.btn:hover {
+  background: #900c3f;
+}
+
+.btn.decline {
+  background: #555;
+}
+
+.btn.decline:hover {
+  background: #333;
+}
+
+/* POP-UP DESIGN */
+.popup {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.4);
+  justify-content: center;
+  align-items: center;
+}
+
+.popup-content {
+  background: white;
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  width: 85%;
+  max-width: 320px;
+  position: relative;
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+.popup-content p {
+  font-size: 14px;
+  color: #333;
+  margin: 10px 0;
+}
+
+.close {
+  position: absolute;
+  top: 8px;
+  right: 12px;
+  font-size: 18px;
+  cursor: pointer;
+  color: #c70039;
+}
+
+.close:hover {
+  color: #900c3f;
+}
+
+/* Animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Mobile Adjustments */
+@media (max-width: 600px) {
+  body {
+    padding: 5px;
+  }
+
+  .letter {
+    width: 95%;
+    max-width: 350px;
+    padding: 12px;
+  }
+
+  h1 {
+    font-size: 18px;
+  }
+
+  p {
+    font-size: 13px;
+  }
+
+  .popup-content {
+    width: 90%;
+  }
+}

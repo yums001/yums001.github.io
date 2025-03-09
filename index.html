@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Consent Letter for Avril Mejico</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="letter">
+        <div class="heart">❤️</div>
+        <h1>Courtship Consent</h1>
+        <p>Dear Avril D. Mejico,</p>
+        <p>
+            Today is march 09, 2025 and matagal ko na talagang gusto manghingi ng permission sayo para mangligaw. 
+            Although alam mo naman na gusto ko mangligaw pero I want to make it special so I made this code. 
+            Sorry pala because I lied na I have to send it to my teacher and it has deadline, 
+            di totoo yun I just wanna suprise you and di ka magtaka that I become suddenly busy.
+        </p>
+        <p>
+            Anyways about sa ligaw, i'm not good at courting kasi ikaw lang tallaga yung unang babaeng liligawan ko 
+            kaya please don't expect too much from me pero as a suitor I will try my best even though di ko talaga alam 
+            how to court someone in online;-;, but don't worry i'll try to figure it out just for you.
+        </p>
+        <p>
+            So Avril Mejico may I court you? If you're still not ready to answer it right now it's fine you can tell me naman 
+            and remember no no pilit diba? I'm willing to wait naman^^.
+        </p>
+        <p class="signature">Sincerely,<br> Princess Ayumi A. Naito</p>
+        <div class="button-container">
+            <button class="btn" onclick="showPopup('approve')">Approve ❤️</button>
+            <button class="btn decline" onclick="showPopup('decline')">Decline 💔</button>
+        </div>
+    </div>
+
+    <!-- Custom Pop-up Modal -->
+    <div id="popup" class="popup">
+        <div class="popup-content">
+            <span class="close" onclick="closePopup()">&times;</span>
+            <p id="popup-message"></p>
+        </div>
+    </div>
+
+    <script>
+        function showPopup(action) {
+            const popup = document.getElementById("popup");
+            const message = document.getElementById("popup-message");
+
+            if (action === "approve") {
+                message.innerHTML = "YEHEYYYY THANK YOU SA PAG APPROVE I PROMISE THAT I'LL TRY MY BEST TO COURT YOUUUU❤️❤️❤️";
+            } else {
+                message.innerHTML = "aww oki langggg pero di ako susuko, I will wait for you until maging readyyyy.";
+            }
+
+            popup.style.display = "flex";
+        }
+
+        function closePopup() {
+            document.getElementById("popup").style.display = "none";
+        }
+    </script>
+</body>
+</html>
